@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Netflix-inspired streaming homepage UI built with HTML, CSS and JavaScript.">
+    <title>Streamix | Movie Streaming UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="#" class="logo">STREAMIX</a>
+
+```
+    <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#trending">Trending</a>
+        <a href="#movies">Movies</a>
+    </nav>
+
+    <div class="nav-actions">
+        <input type="search" id="searchInput" placeholder="Search titles..." aria-label="Search titles">
+        <span class="profile">P</span>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="eyebrow">STREAMIX ORIGINAL</p>
+            <h1>THE LAST<br>FRONTIER</h1>
+            <div class="hero-meta">
+                <span class="match">98% Match</span>
+                <span>2026</span>
+                <span class="badge">16+</span>
+                <span>Action • Sci-Fi</span>
+            </div>
+            <p class="hero-description">
+                When the world falls into darkness, one unlikely hero must
+                uncover the truth before humanity loses its final hope.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-light" id="playHero">▶ Play</button>
+                <button class="btn btn-dark" id="infoHero">ⓘ More Info</button>
+            </div>
+        </div>
+        <div class="hero-shade"></div>
+    </section>
+
+    <section class="content-section" id="trending">
+        <h2>Trending Now</h2>
+        <div class="movie-row" id="trendingRow"></div>
+    </section>
+
+    <section class="content-section" id="movies">
+        <h2>Popular on Streamix</h2>
+        <div class="filter-bar">
+            <button class="filter active" data-filter="All">All</button>
+            <button class="filter" data-filter="Action">Action</button>
+            <button class="filter" data-filter="Drama">Drama</button>
+            <button class="filter" data-filter="Sci-Fi">Sci-Fi</button>
+        </div>
+        <div class="movie-grid" id="movieGrid"></div>
+        <p class="empty-message" id="emptyMessage" hidden>No titles found. Try another search.</p>
+    </section>
+</main>
+
+<footer>
+    <p>STREAMIX UI CLONE · Built with HTML, CSS & JavaScript</p>
+    <p class="disclaimer">A learning project. Not affiliated with Netflix.</p>
+</footer>
+
+<dialog id="movieDialog">
+    <button class="close-dialog" id="closeDialog" aria-label="Close dialog">✕</button>
+    <img id="dialogImage" src="" alt="">
+    <div class="dialog-content">
+        <p class="eyebrow">NOW STREAMING</p>
+        <h2 id="dialogTitle"></h2>
+        <p id="dialogDescription"></p>
+        <button class="btn btn-light" id="dialogPlay">▶ Play</button>
+    </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+```
+
+</body>
+</html>
